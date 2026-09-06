@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import proof from '../images/proof.jpg';
+import proof1 from '../images/proof1.jpg';
+import proof3 from '../images/proof3.jpg';
 
 const INTERVAL = 5500
 
@@ -9,31 +12,53 @@ const INTERVAL = 5500
  * or pass an <img> in instead, whichever is easier for you to swap.
  */
 const SLIDES = [
+  // {
+  //   art: 'linear-gradient(135deg,#0a1826 0%, #123a52 45%, #1c4a5e 100%)',
+  //   eyebrow: 'Batch #1 · Now Loading',
+  //   title: <>Pull your fortune<br />from the Grand Line.</>,
+  //   lead: "95 packs. Real One Piece TCG hits. One chest goes home a legend. This is KimSamOPTCG's first oripa batch — place your banner art here.",
+  //   actions: (
+  //     <>
+  //       <a href="#newsletter" className="btn btn-solid">Get notified</a>
+  //       <Link to="/prizepool" className="btn">View prize pool</Link>
+  //     </>
+  //   ),
+  // },
   {
-    art: 'linear-gradient(135deg,#0a1826 0%, #123a52 45%, #1c4a5e 100%)',
-    eyebrow: 'Batch #1 · Now Loading',
-    title: <>Pull your fortune<br />from the Grand Line.</>,
-    lead: "95 packs. Real One Piece TCG hits. One chest goes home a legend. This is KimSamOPTCG's first oripa batch — place your banner art here.",
-    actions: (
-      <>
-        <a href="#newsletter" className="btn btn-solid">Get notified</a>
-        <Link to="/prizepool" className="btn">View prize pool</Link>
-      </>
-    ),
+  art: `url(${proof})`,
+  type: 'photo',
+  eyebrow: 'FIRST BATCH MYSTERY PACK',
+  title: <>What’s hiding<br />inside?</>,
+  lead: 'Every pack holds a surprise. Will yours reveal a rare hit?',
+  actions: <Link to="/prizepool" className="btn btn-solid">Explore the Pool</Link>,
+  },
+  {
+  art: `url(${proof1})`,
+  type: 'photo',
+  eyebrow: 'BATCH #1 · NOW LOADING',
+  title: <>Your next hit<br />awaits on the Grand Line.</>,
+  lead: "100 packs. Real One Piece TCG hits. One lucky collector takes home the grand prize. Welcome to KimSamOPTCG's first mystery pack.",
+  actions: (
+    <>
+      <a href="#newsletter" className="btn btn-solid">Get Notified</a>
+      <Link to="/prizepool" className="btn">View Prize Pool</Link>
+    </>
+  ),
   },
   // {
   //   art: 'linear-gradient(135deg,#1a1210 0%, #5a2a20 55%, #8c4a3a 100%)',
-  //   eyebrow: 'Random Hits Already Claimed',
-  //   title: <>The chest is<br />a quarter open.</>,
+  //   eyebrow: 'Random Hits Ready to be Claimed',
+  //   title: <>The chest is<br />ready to be open.</>,
   //   lead: "Every pack pulled brings the batch closer to its Last One prize. Track exactly what's left before you pick a slot.",
   //   actions: <Link to="/prizepool" className="btn btn-solid">See what's left</Link>,
   // },
   {
-    art: 'linear-gradient(135deg,#0a1826 0%, #2b2410 55%, #6b5420 100%)',
-    eyebrow: 'Fair, Numbered, Transparent',
-    title: <>95 packs.<br />95 unique IDs.</>,
-    lead: 'No mystery math. Every pack is numbered and tracked from On Hand to Sold, live, so you always know your odds.',
-    actions: <a href="#how" className="btn btn-solid">How it works</a>,
+    art: `url(${proof3})`,
+    type: 'photo',
+    eyebrow: 'Random Hits Ready to be Claimed',
+    title: <>The chest is<br />ready to be open.</>,
+    lead: "Every pack pulled brings the batch closer to its Last One prize. Track exactly what's left before you pick a slot.",
+    actions: <Link to="/prizepool" className="btn btn-solid">See what's left</Link>,
   },
 ]
 
@@ -61,8 +86,8 @@ export default function HeroSlider() {
       onMouseLeave={restart}
     >
       {SLIDES.map((slide, i) => (
-        <div key={i} className={`hero-slide ${i === current ? 'is-active' : ''}`}>
-          <div className="art" style={{ background: slide.art }} />
+        <div key={i} className={`hero-slide ${slide.type === 'photo' ? 'hero-slide-photo' : ''} ${i === current ? 'is-active' : ''}`}>
+          <div className="art" style={{ backgroundImage: slide.art }} />
           <div className="hero-copy">
             <div className="eyebrow">{slide.eyebrow}</div>
             <h1>{slide.title}</h1>

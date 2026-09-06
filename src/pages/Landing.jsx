@@ -20,22 +20,24 @@ export default function Landing() {
       <section id="how">
         <div className="container">
           <Reveal className="eyebrow">The process</Reveal>
-          <Reveal as="h2">Three steps to your hit</Reveal>
+          <Reveal as="h2">Three steps to your mystery pack</Reveal>
           <Reveal stagger className="steps">
             <div className="step">
               <span className="num">01</span>
-              <h3>Pick a pack</h3>
-              <p>Choose any On Hand slot from the 100-pack batch. Each slot is numbered and locked to one buyer.</p>
+              <h3>Select an available pack</h3>
+              <p>Browse the inventory and choose any pack marked On Hand. Each pack has its own number.</p>
             </div>
             <div className="step">
               <span className="num">02</span>
-              <h3>Wait for reveal day</h3>
-              <p>Once your slot is claimed, it's marked Sold and held until the batch's scheduled opening.</p>
-            </div>
+              <h3>Contact the page</h3>
+              <p><a href="https://www.facebook.com/profile.php?id=61594259068021"
+                target="_blank"
+                rel="noopener noreferrer">Contact us through the Facebook page</a> and tell us which pack number you would like to choose.</p>
+            </div>  
             <div className="step">
               <span className="num">03</span>
-              <h3>Claim your hit</h3>
-              <p>Your pull is logged straight to the prize pool page with your serial, card name, and photo proof.</p>
+              <h3>Discuss payment and shipping</h3>
+              <p>Discuss payment and shipping details, then you open your own mystery pack.</p>
             </div>
           </Reveal>
         </div>
@@ -48,7 +50,7 @@ export default function Landing() {
           <Reveal>
             <div className="eyebrow">Live inventory</div>
             <h2>Every pack, tracked<br />from hand to sold.</h2>
-            <p>KimSamOPTCG numbers all 95 packs in a batch and marks each one On Hand or Sold in real time, so the inventory itself is your proof of fairness. Full breakdown lives on the prize pool page.</p>
+            <p>KimSamOPTCG numbers all 100 packs in a batch and marks each one On Hand or Sold in real time, so the inventory itself is your proof of fairness. Full breakdown lives on the prize pool page.</p>
             <Link to="/prizepool" className="btn btn-solid">Open full inventory</Link>
           </Reveal>
 

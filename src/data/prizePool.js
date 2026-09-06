@@ -48,10 +48,10 @@ export const PRIZE_POOL_PLACEHOLDER = [
   { serial: 'PRB Normal Low Hits', name: 'PRB Normal Low Hits',   tier: 'C PRIZE',  image: null, quantity: 8 },
   { serial: 'OP-SRs', name: 'Random SR Card',   tier: 'C PRIZE',  image: null, quantity: 40 },
   { serial: 'OP-Normal Leader', name: 'Random Normal Card',   tier: 'D PRIZE',  image: null, quantity: 12 },
-  { serial: 'OP-DON Card', name: 'Random DON Card',   tier: 'D PRIZE',  image: null, quantity: 11 },
+  { serial: 'OP-DON Card', name: 'Random DON Card',   tier: 'D PRIZE',  image: null, quantity: 16 },
 ]
 
 export const BATCH_STATS = {
-  total: 95,
+  total: 100,
   hits: 0,
 }

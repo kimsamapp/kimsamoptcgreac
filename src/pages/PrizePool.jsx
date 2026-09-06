@@ -25,11 +25,11 @@ export default function PrizePool() {
             <div ref={ringRef} className="ring" style={{ '--pct': ringVisible ? pct : 0 }}>
               <div className="ring-inner">
                 <strong ref={countRef}>{count}</strong>
-                <small>/ {BATCH_STATS.total} HITS</small>
+                <small>/ {BATCH_STATS.total} PACKS</small>
               </div>
             </div>
             <div>
-              <h3 style={{ marginBottom: '.2em' }}>{BATCH_STATS.hits} of {BATCH_STATS.total} packs opened</h3>
+              <h3 style={{ marginBottom: '.2em' }}>{BATCH_STATS.hits} of {BATCH_STATS.total} packs sold</h3>
               <p style={{ margin: 0 }}>{BATCH_STATS.total - BATCH_STATS.hits} packs are still On Hand and waiting to be claimed.</p>
             </div>
           </Reveal>
@@ -55,8 +55,8 @@ export default function PrizePool() {
       <section id="inventory">
         <div className="container">
           <Reveal className="eyebrow">Inventory</Reveal>
-          <Reveal as="h2">All 95 packs</Reveal>
-          <Reveal as="p">Every pack has a unique ID (A-001 through A-095). Filter by status or search a specific ID to check it before you buy.</Reveal>
+          <Reveal as="h2">All 100 packs</Reveal>
+          <Reveal as="p">Every pack has a unique ID (A-001 through A-100). Filter by status or search a specific ID to check it before you buy.</Reveal>
 
           <PackInventory />
         </div>

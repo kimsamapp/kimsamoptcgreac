@@ -142,6 +142,10 @@ p{ margin:0 0 1em; color:var(--fog); max-width:62ch; }
   position:absolute; inset:0;
   background-size:cover; background-position:center;
 }
+.hero-slide-photo .art{
+  background-size:cover;
+  background-repeat:no-repeat;
+}
 .hero-slide::after{
   content:"";
   position:absolute; inset:0;
