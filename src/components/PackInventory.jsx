@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import { generatePackInventory } from '../data/packInventory.js'
 
 export default function PackInventory() {
-  const packs = useMemo(() => generatePackInventory(100, 0), [])
+  const packs = useMemo(() => generatePackInventory(100, 10), [])
   const [filter, setFilter] = useState('all')
   const [query, setQuery] = useState('')
 

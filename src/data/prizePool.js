@@ -53,5 +53,5 @@ export const PRIZE_POOL_PLACEHOLDER = [
 
 export const BATCH_STATS = {
   total: 100,
-  hits: 0,
+  hits: 10,
 }

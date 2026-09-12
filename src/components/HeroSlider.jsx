@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import proof from '../images/proof.jpg';
 import proof1 from '../images/proof1.jpg';
 import proof3 from '../images/proof3.jpg';
+import banner from '../images/banner.png';
 
 const INTERVAL = 5500
 
@@ -25,7 +26,7 @@ const SLIDES = [
   //   ),
   // },
   {
-  art: `url(${proof})`,
+  art: `url(${banner})`,
   type: 'photo',
   eyebrow: 'FIRST BATCH MYSTERY PACK',
   title: <>What’s hiding<br />inside?</>,
@@ -33,7 +34,7 @@ const SLIDES = [
   actions: <Link to="/prizepool" className="btn btn-solid">Explore the Pool</Link>,
   },
   {
-  art: `url(${proof1})`,
+  art: `url(${proof})`,
   type: 'photo',
   eyebrow: 'BATCH #1 · NOW LOADING',
   title: <>Your next hit<br />awaits on the Grand Line.</>,

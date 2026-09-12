@@ -6,19 +6,16 @@
  * Swap this out for a real fetch to your backend/spreadsheet once
  * you have one — components just need an array of { id, status }.
  */
-export function generatePackInventory(total = 100, soldCount = 0) {
+export const soldItems = [5, 15, 25, 35, 45, 55, 65, 75, 85, 95]
+
+export function generatePackInventory(total = 100, soldCount = 10) {
   const packs = []
   for (let i = 1; i <= total; i++) {
     packs.push({ id: `A${String(i).padStart(3, '0')}`, status: 'hand' })
   }
 
-  // deterministic-ish shuffle so the demo looks natural but is reproducible
-  const soldIndexes = new Set()
-  // while (soldIndexes.size < soldCount) {
-  //   soldIndexes.add(Math.floor(rand() * total))
-  // }
-  soldIndexes.forEach((i) => {
-    packs[i].status = 'sold'
+  soldItems.forEach((i) => {
+    packs[i-1].status = 'sold'
   })
 
   return packs
